@@ -1,0 +1,16 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  border-bottom: 1px dotted lightgrey;
+  padding-bottom: 1rem;
+}
+
+.UpdateButton {
+  width: 100%;
+  margin-top: auto;
+  border-radius: 0.25rem;
+  height: 2rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}

@@ -1,0 +1,28 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.InputWrapper {
+  position: relative;
+  display: flex;
+}
+
+.Input {
+  flex-grow: 1;
+  height: 1.5rem;
+
+  &.HasError {
+    border: 1px solid indianred;
+  }
+}
+
+.Error {
+  color: indianred;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+}

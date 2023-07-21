@@ -1,0 +1,33 @@
+.Table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+
+  td {
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  th {
+    padding: 0 0.5rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  tr {
+    height: 2rem;
+  }
+
+  td, th {
+    border: 1px solid black;
+  }
+
+  tbody tr:nth-child(even) {
+   background-color: #f5f5f5;
+  }
+}
+
+.Header {
+  background-color: lightgrey;
+}
