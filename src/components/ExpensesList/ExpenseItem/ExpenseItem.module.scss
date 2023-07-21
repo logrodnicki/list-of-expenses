@@ -1,3 +1,17 @@
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.Wrapper {
+  animation: fadeOut 300ms ease-in-out forwards;
+}
+
 .DeleteButton {
   border: 0;
   outline: 0;

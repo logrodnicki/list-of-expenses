@@ -16,7 +16,7 @@ const ExpenseItem: FC<Props> = ({
   const deleteHandler = () => expensesStore.deleteExpense(id);
 
   return (
-    <tr>
+    <tr className={styles.Wrapper}>
       <td>{title}</td>
       <td>{amount}</td>
       <td>{convertedAmount}</td>
