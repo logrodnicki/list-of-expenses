@@ -32,12 +32,18 @@ class Expenses {
 
   changeConversionRate = (value: number) => {
     this.conversionRate = value;
+  };
 
-    this.list = this.list.map((expense) => ({
+  get enrichedList(): Expense[] {
+    return this.list.map((expense) => ({
       ...expense,
       convertedAmount: Number(this.convertAmount(expense.amount))
     }));
-  };
+  }
+
+  get isListEmpty(): boolean {
+    return !this.enrichedList.length;
+  }
 }
 
 export const expensesStore = new Expenses();

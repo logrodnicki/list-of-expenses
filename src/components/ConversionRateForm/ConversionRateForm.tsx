@@ -14,7 +14,7 @@ const ConversionRateForm = observer((): ReactElement => {
   const [error, setError] = useState<string | null>(null);
 
   const validate = (value: number): boolean => {
-    const valueError = amountValidator(value);
+    const valueError = amountValidator(Number(value));
 
     setError(valueError);
 

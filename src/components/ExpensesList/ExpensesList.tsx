@@ -6,7 +6,7 @@ import ExpenseItem from '@components/ExpensesList/ExpenseItem/ExpenseItem.tsx';
 import styles from './ExpensesList.module.scss';
 
 const ExpensesList = observer((): ReactElement => {
-  const { list } = useExpensesStore();
+  const { enrichedList, isListEmpty } = useExpensesStore();
 
   return (
     <table className={styles.Table}>
@@ -19,10 +19,10 @@ const ExpensesList = observer((): ReactElement => {
         </tr>
       </thead>
       <tbody>
-        {list.map((expense) => (
+        {enrichedList.map((expense) => (
           <ExpenseItem key={expense.id} expense={expense} />
         ))}
-        {!list.length ? (
+        {isListEmpty ? (
           <tr>
             <td colSpan={4}>No data</td>
           </tr>
